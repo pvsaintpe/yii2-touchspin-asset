@@ -1,0 +1,35 @@
+{
+  "name": "pvsaintpe/yii2-touchspin-asset",
+  "description": "Package",
+  "keywords": [
+    "yii2",
+    "touchspin"
+  ],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Pavel Veselov",
+      "email": "pvsaintpe@icloud.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "yiisoft/yii2": "2.*",
+    "kartik-v/yii2-krajee-base": "*",
+    "kartik-v/yii2-grid": "*",
+    "kartik-v/yii2-widgets": "*",
+    "kartik-v/yii2-widget-touchspin": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "pvsaintpe\\touchspin\\": ""
+    }
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
