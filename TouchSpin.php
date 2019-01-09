@@ -6,7 +6,7 @@
  * Time: 13:20
  */
 
-namespace pvsaintpe\touchspin\assets;
+namespace pvsaintpe\touchspin;
 
 
 class TouchSpin extends \kartik\widgets\TouchSpin
@@ -29,7 +29,7 @@ class TouchSpin extends \kartik\widgets\TouchSpin
 
     public function init()
     {
-        TouchSpin::register($this->getView());
+        TouchSpinAsset::register($this->getView());
         $this->options = array_merge(
             ['class' => $this->class,
                 'data-max-page' => TouchSpin::$maxPageSize,

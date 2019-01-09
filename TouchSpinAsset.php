@@ -9,13 +9,15 @@
 namespace pvsaintpe\touchspin;
 
 
-class TouchSpinAsset extends kartik\touchspin\TouchSpinAsset
+use kartik\base\AssetBundle;
+
+class TouchSpinAsset extends AssetBundle
 {
 
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('js', ['js/touchspin']);
+        $this->setupAssets('js', ['touchspin']);
         parent::init();
     }
 }
