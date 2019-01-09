@@ -9,6 +9,8 @@
 namespace pvsaintpe\touchspin;
 
 
+use pvsaintpe\helpers\ArrayHelper;
+
 class TouchSpin extends \kartik\widgets\TouchSpin
 {
     /**
@@ -16,25 +18,10 @@ class TouchSpin extends \kartik\widgets\TouchSpin
      */
     public $class = ['pv_touchspin'];
 
-    /**
-     * @var int
-     */
-    public static $minPageSize = 1;
-
-    /**
-     * @var int
-     */
-    public static $maxPageSize = 50;
-
-
     public function init()
     {
         TouchSpinAsset::register($this->getView());
-        $this->options = array_merge(
-            ['class' => $this->class,
-                'data-max-page' => TouchSpin::$maxPageSize,
-                'data-min-page' => TouchSpin::$minPageSize,
-            ], $this->options);
+        $this->options = ArrayHelper::merge(['class' => $this->class], $this->options);
         parent::init();
     }
 }
