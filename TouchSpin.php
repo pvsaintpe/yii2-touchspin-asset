@@ -8,9 +8,6 @@
 
 namespace pvsaintpe\touchspin;
 
-
-use pvsaintpe\helpers\ArrayHelper;
-
 class TouchSpin extends \kartik\widgets\TouchSpin
 {
     /**
@@ -20,8 +17,8 @@ class TouchSpin extends \kartik\widgets\TouchSpin
 
     public function init()
     {
-        TouchSpinAsset::register($this->getView());
-        $this->options = ArrayHelper::merge(['class' => $this->class], $this->options);
         parent::init();
+        TouchSpinAsset::register($this->getView());
+        $this->options = array_merge_recursive(['class' => $this->class], $this->options);
     }
 }
