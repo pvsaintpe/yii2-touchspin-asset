@@ -30,11 +30,8 @@ class TouchSpin extends \kartik\widgets\TouchSpin
     public function init()
     {
         TouchSpinAsset::register($this->getView());
-        $this->options = array_merge(
-            ['class' => $this->class,
-                'data-max-page' => TouchSpin::$maxPageSize,
-                'data-min-page' => TouchSpin::$minPageSize,
-            ], $this->options);
+        $this->options = array_merge_recursive(
+            ['class' => $this->class], $this->options);
         parent::init();
     }
 }
